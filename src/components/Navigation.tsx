@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Home, Info, Package, Users, Phone, Target } from "lucide-react";
+import cooperativeLogo from "@/assets/cooperative-logo.png";
 
 const navItems = [
   { path: "/", label: "Home", icon: Home },
@@ -21,13 +22,11 @@ export function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">B</span>
-            </div>
+          <Link to="/" className="flex items-center space-x-3">
+            <img src={cooperativeLogo} alt="Yaanciyyeetti Cooperative Union Logo" className="w-12 h-12" />
             <div className="hidden sm:block">
-              <h1 className="font-bold text-lg text-foreground">Bunno Bedelle</h1>
-              <p className="text-xs text-muted-foreground">Farmers' Cooperative</p>
+              <h1 className="font-bold text-lg text-foreground">Yaanciyyeetti WUQO</h1>
+              <p className="text-xs text-muted-foreground">Cooperative Union Ltd</p>
             </div>
           </Link>
 
