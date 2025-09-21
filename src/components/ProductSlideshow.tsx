@@ -7,10 +7,9 @@ import coffeeBeans from "@/assets/coffee-beans.jpg";
 import sesameSeeds from "@/assets/sesame-seeds.jpg";
 import soyaBeans from "@/assets/soya-beans.jpg";
 import maizeCorn from "@/assets/maize-corn.jpg";
-import teffGrain from "@/assets/teff-grain-authentic.jpg";
-import nigerSeed from "@/assets/niger-seed-nug.jpg";
+import teffGrain from "@/assets/teff-grain.jpg";
+import nigerSeed from "@/assets/niger-seed.jpg";
 import riceGrains from "@/assets/rice-grains.jpg";
-import cooperativeLogo from "@/assets/cooperative-logo.png";
 
 const slides = [
   {
@@ -39,15 +38,15 @@ const slides = [
   },
   {
     image: teffGrain,
-    badge: "Ethiopian Superfood",
-    title: "Teff (ጤፍ)",
-    description: "Ethiopia's indigenous ancient grain and primary ingredient for injera bread. Gluten-free superfood with exceptional protein and minerals."
+    badge: "Ancient Grain",
+    title: "Ethiopian Teff",
+    description: "Ethiopia's indigenous superfood grain with exceptional nutritional value. Gluten-free and rich in minerals for health-conscious consumers."
   },
   {
     image: nigerSeed,
-    badge: "Premium Oil Seed",
-    title: "Niger Seed (ኑግ)",
-    description: "Premium Ethiopian nug with 35% oil content. Traditional oilseed crop with high nutritional value and growing export demand."
+    badge: "Oil Seed",
+    title: "Niger Seeds",
+    description: "High-quality niger seed with excellent oil content. Indigenous oilseed crop with growing international demand and market value."
   },
   {
     image: riceGrains,
@@ -155,14 +154,11 @@ export default function ProductSlideshow() {
 
       {/* Cooperative Union Title Overlay */}
       <div className="absolute top-6 left-1/2 -translate-x-1/2 z-20 text-center">
-        <div className="flex items-center justify-center mb-2">
-          <img src={cooperativeLogo} alt="Yaanciyyeetti Cooperative Union Logo" className="h-16 w-auto opacity-90" />
-        </div>
         <h2 className="text-2xl md:text-3xl font-bold text-white/90">
-          Yaanciyyeetti WUQO OPB Business Cooperative Union
+          Bunno Bedelle Farmers' Cooperative Union
         </h2>
         <p className="text-white/70 text-lg">
-          Empowering Ethiopian Agriculture Through Innovation & Unity
+          Empowering Ethiopian Agriculture Through Innovation
         </p>
       </div>
     </section>

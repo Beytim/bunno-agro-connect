@@ -7,10 +7,9 @@ import sesameSeeds from "@/assets/sesame-seeds.jpg";
 import agriculturalInputs from "@/assets/agricultural-inputs.jpg";
 import soyaBeans from "@/assets/soya-beans.jpg";
 import maizeCorn from "@/assets/maize-corn.jpg";
-import teffGrain from "@/assets/teff-grain-authentic.jpg";
-import nigerSeed from "@/assets/niger-seed-nug.jpg";
+import teffGrain from "@/assets/teff-grain.jpg";
+import nigerSeed from "@/assets/niger-seed.jpg";
 import riceGrains from "@/assets/rice-grains.jpg";
-import cooperativeLogo from "@/assets/cooperative-logo.png";
 
 export default function Products() {
   return (
@@ -18,13 +17,10 @@ export default function Products() {
       <div className="container mx-auto px-4 py-12">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="flex items-center justify-center mb-6">
-            <img src={cooperativeLogo} alt="Yaanciyyeetti Cooperative Union Logo" className="h-20 w-auto" />
-          </div>
           <h1 className="text-4xl font-bold text-foreground mb-4">Our Products & Services</h1>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Discover our premium agricultural products and comprehensive services designed 
-            to support farmers and promote sustainable agriculture across Ethiopia.
+            to support farmers and promote sustainable agriculture.
           </p>
         </div>
 
@@ -123,19 +119,19 @@ export default function Products() {
             <div className="aspect-video bg-cover bg-center" style={{backgroundImage: `url(${teffGrain})`}}>
               <div className="w-full h-full bg-black/40 flex items-end p-6">
                 <div>
-                  <Badge className="mb-2 bg-accent">Ethiopian Superfood</Badge>
-                  <h3 className="text-2xl font-bold text-white">Teff (ጤፍ)</h3>
+                  <Badge className="mb-2 bg-accent">Ancient Grain</Badge>
+                  <h3 className="text-2xl font-bold text-white">Teff</h3>
                 </div>
               </div>
             </div>
             <CardContent className="p-6">
               <p className="text-muted-foreground mb-4">
-                Ethiopia's indigenous ancient grain and primary ingredient for injera bread. 
-                Gluten-free superfood with exceptional protein, fiber and mineral content.
+                Ethiopia's indigenous superfood grain with exceptional nutritional value. 
+                Gluten-free and rich in minerals, perfect for health-conscious consumers.
               </p>
               <div className="flex items-center gap-2">
                 <Leaf className="w-4 h-4 text-primary" />
-                <span className="text-sm font-medium">Indigenous Superfood</span>
+                <span className="text-sm font-medium">Gluten-Free</span>
               </div>
             </CardContent>
           </Card>
@@ -145,19 +141,19 @@ export default function Products() {
             <div className="aspect-video bg-cover bg-center" style={{backgroundImage: `url(${nigerSeed})`}}>
               <div className="w-full h-full bg-black/40 flex items-end p-6">
                 <div>
-                  <Badge className="mb-2 bg-secondary">Premium Oil Seed</Badge>
-                  <h3 className="text-2xl font-bold text-white">Niger Seed (ኑግ)</h3>
+                  <Badge className="mb-2 bg-secondary">Oil Seed</Badge>
+                  <h3 className="text-2xl font-bold text-white">Niger Seed</h3>
                 </div>
               </div>
             </div>
             <CardContent className="p-6">
               <p className="text-muted-foreground mb-4">
-                Premium Ethiopian nug (Guizotia abyssinica) with exceptional oil content. 
-                Traditional Ethiopian oilseed crop with high nutritional value and growing export demand.
+                High-quality niger seed (Guizotia abyssinica) with excellent oil content. 
+                Indigenous oilseed crop with growing international demand.
               </p>
               <div className="flex items-center gap-2">
                 <Droplets className="w-4 h-4 text-primary" />
-                <span className="text-sm font-medium">35% Oil Content</span>
+                <span className="text-sm font-medium">Rich Oil Content</span>
               </div>
             </CardContent>
           </Card>
