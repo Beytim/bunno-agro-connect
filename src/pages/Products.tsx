@@ -1,10 +1,15 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Coffee, Wheat, Droplets, Truck, ArrowUpRight } from "lucide-react";
+import { Coffee, Wheat, Droplets, Truck, ArrowUpRight, Leaf } from "lucide-react";
 import coffeeBeans from "@/assets/coffee-beans.jpg";
 import sesameSeeds from "@/assets/sesame-seeds.jpg";
 import agriculturalInputs from "@/assets/agricultural-inputs.jpg";
+import soyaBeans from "@/assets/soya-beans.jpg";
+import maizeCorn from "@/assets/maize-corn.jpg";
+import teffGrain from "@/assets/teff-grain.jpg";
+import nigerSeed from "@/assets/niger-seed.jpg";
+import riceGrains from "@/assets/rice-grains.jpg";
 
 export default function Products() {
   return (
@@ -20,7 +25,7 @@ export default function Products() {
         </div>
 
         {/* Main Products */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {/* Coffee */}
           <Card className="overflow-hidden">
             <div className="aspect-video bg-cover bg-center" style={{backgroundImage: `url(${coffeeBeans})`}}>
@@ -61,6 +66,116 @@ export default function Products() {
               <div className="flex items-center gap-2">
                 <Wheat className="w-4 h-4 text-primary" />
                 <span className="text-sm font-medium">High Oil Content</span>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Soya Beans */}
+          <Card className="overflow-hidden">
+            <div className="aspect-video bg-cover bg-center" style={{backgroundImage: `url(${soyaBeans})`}}>
+              <div className="w-full h-full bg-black/40 flex items-end p-6">
+                <div>
+                  <Badge className="mb-2 bg-secondary">High Protein</Badge>
+                  <h3 className="text-2xl font-bold text-white">Soya Beans</h3>
+                </div>
+              </div>
+            </div>
+            <CardContent className="p-6">
+              <p className="text-muted-foreground mb-4">
+                Premium quality soybeans with high protein content, perfect for oil extraction 
+                and food processing. Grown using sustainable farming methods.
+              </p>
+              <div className="flex items-center gap-2">
+                <Leaf className="w-4 h-4 text-primary" />
+                <span className="text-sm font-medium">Protein Rich</span>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Maize */}
+          <Card className="overflow-hidden">
+            <div className="aspect-video bg-cover bg-center" style={{backgroundImage: `url(${maizeCorn})`}}>
+              <div className="w-full h-full bg-black/40 flex items-end p-6">
+                <div>
+                  <Badge className="mb-2 bg-primary">Staple Crop</Badge>
+                  <h3 className="text-2xl font-bold text-white">Maize (Corn)</h3>
+                </div>
+              </div>
+            </div>
+            <CardContent className="p-6">
+              <p className="text-muted-foreground mb-4">
+                High-yield yellow and white maize varieties, processed to food-grade standards. 
+                Essential staple crop for food security and livestock feed.
+              </p>
+              <div className="flex items-center gap-2">
+                <Wheat className="w-4 h-4 text-primary" />
+                <span className="text-sm font-medium">High Yield</span>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Teff */}
+          <Card className="overflow-hidden">
+            <div className="aspect-video bg-cover bg-center" style={{backgroundImage: `url(${teffGrain})`}}>
+              <div className="w-full h-full bg-black/40 flex items-end p-6">
+                <div>
+                  <Badge className="mb-2 bg-accent">Ancient Grain</Badge>
+                  <h3 className="text-2xl font-bold text-white">Teff</h3>
+                </div>
+              </div>
+            </div>
+            <CardContent className="p-6">
+              <p className="text-muted-foreground mb-4">
+                Ethiopia's indigenous superfood grain with exceptional nutritional value. 
+                Gluten-free and rich in minerals, perfect for health-conscious consumers.
+              </p>
+              <div className="flex items-center gap-2">
+                <Leaf className="w-4 h-4 text-primary" />
+                <span className="text-sm font-medium">Gluten-Free</span>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Niger Seed */}
+          <Card className="overflow-hidden">
+            <div className="aspect-video bg-cover bg-center" style={{backgroundImage: `url(${nigerSeed})`}}>
+              <div className="w-full h-full bg-black/40 flex items-end p-6">
+                <div>
+                  <Badge className="mb-2 bg-secondary">Oil Seed</Badge>
+                  <h3 className="text-2xl font-bold text-white">Niger Seed</h3>
+                </div>
+              </div>
+            </div>
+            <CardContent className="p-6">
+              <p className="text-muted-foreground mb-4">
+                High-quality niger seed (Guizotia abyssinica) with excellent oil content. 
+                Indigenous oilseed crop with growing international demand.
+              </p>
+              <div className="flex items-center gap-2">
+                <Droplets className="w-4 h-4 text-primary" />
+                <span className="text-sm font-medium">Rich Oil Content</span>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Rice */}
+          <Card className="overflow-hidden">
+            <div className="aspect-video bg-cover bg-center" style={{backgroundImage: `url(${riceGrains})`}}>
+              <div className="w-full h-full bg-black/40 flex items-end p-6">
+                <div>
+                  <Badge className="mb-2 bg-primary">Premium Grade</Badge>
+                  <h3 className="text-2xl font-bold text-white">Rice</h3>
+                </div>
+              </div>
+            </div>
+            <CardContent className="p-6">
+              <p className="text-muted-foreground mb-4">
+                Premium quality rice varieties grown in optimal highland conditions. 
+                Carefully processed and graded to meet international quality standards.
+              </p>
+              <div className="flex items-center gap-2">
+                <Wheat className="w-4 h-4 text-primary" />
+                <span className="text-sm font-medium">Premium Quality</span>
               </div>
             </CardContent>
           </Card>
@@ -148,17 +263,17 @@ export default function Products() {
           {[
             {
               title: "Export Products", 
-              items: ["Premium Coffee Beans", "White Sesame Seeds", "Mixed Sesame Varieties"],
+              items: ["Premium Coffee Beans", "Sesame Seeds", "Soya Beans", "Niger Seeds", "Teff Grain"],
               icon: ArrowUpRight
             },
             {
               title: "Local Market",
-              items: ["Fresh Produce", "Processed Grains", "Organic Vegetables"],
+              items: ["Maize (Corn)", "Rice", "Fresh Produce", "Processed Grains"],
               icon: Wheat
             },
             {
               title: "Value Added",
-              items: ["Coffee Processing", "Seed Cleaning", "Quality Grading"],
+              items: ["Coffee Processing", "Seed Cleaning", "Oil Extraction", "Quality Grading"],
               icon: Coffee
             }
           ].map((category) => {

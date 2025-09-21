@@ -12,42 +12,15 @@ import {
   Globe,
   Heart
 } from "lucide-react";
-import heroImage from "@/assets/hero-image.jpg";
+import ProductSlideshow from "@/components/ProductSlideshow";
 import coffeeBeans from "@/assets/coffee-beans.jpg";
 import transportTruck from "@/assets/transport-truck.jpg";
 
 export default function Index() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{backgroundImage: `url(${heroImage})`}}
-        >
-          <div className="absolute inset-0 bg-black/50"></div>
-        </div>
-        
-        <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Bunno Bedelle Farmers' Cooperative Union
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-white/90">
-            Empowering agricultural communities through sustainable practices, 
-            innovation, and collaborative growth
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="text-lg px-8">
-              <Link to="/about" className="flex items-center gap-2">
-                Learn More <ArrowRight className="w-5 h-5" />
-              </Link>
-            </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 bg-white/10 border-white/30 text-white hover:bg-white/20">
-              <Link to="/contact">Join Our Cooperative</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      {/* Hero Section - Product Slideshow */}
+      <ProductSlideshow />
 
       {/* Quick Stats */}
       <section className="py-16 bg-secondary/20">

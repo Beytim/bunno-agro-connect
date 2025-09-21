@@ -101,6 +101,37 @@ export default function About() {
           </CardContent>
         </Card>
 
+        {/* International Partners */}
+        <Card className="mb-12">
+          <CardHeader>
+            <CardTitle className="text-2xl text-primary">International Partners & NGOs</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground mb-6">
+              Working with NGOs and international organizations to enhance agricultural development 
+              and strengthen farmer capabilities across Ethiopia.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+              {[
+                "World Food Programme (WFP)",
+                "ACDI/VOCA",
+                "Agricultural Transformation Agency (ATA)",
+                "TechnoServe",
+                "AISCO",
+                "International Development Partners"
+              ].map((partner) => (
+                <Card key={partner} className="p-4">
+                  <h4 className="font-semibold text-foreground text-sm">{partner}</h4>
+                </Card>
+              ))}
+            </div>
+            <p className="text-sm text-muted-foreground">
+              These partnerships enable us to access advanced technologies, training programs, 
+              and market opportunities that benefit our member farmers and their communities.
+            </p>
+          </CardContent>
+        </Card>
+
         {/* Core Values */}
         <Card>
           <CardHeader>
