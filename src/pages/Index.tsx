@@ -20,11 +20,20 @@ export default function Index() {
   return (
     <div className="min-h-screen">
       {/* Hero Section - Product Slideshow */}
-      <ProductSlideshow />
+      <div className="bg-gradient-to-b from-primary/5 to-background pb-8">
+        <ProductSlideshow />
+      </div>
 
       {/* Quick Stats */}
-      <section className="py-16 bg-secondary/20">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-gradient-to-r from-secondary/10 via-secondary/20 to-secondary/10 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-40" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000' fill-opacity='0.02'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        }}></div>
+        <div className="container mx-auto px-4 relative">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Cooperative Impact</h2>
+            <p className="text-lg text-muted-foreground">Transforming Ethiopian agriculture since 2003</p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
               { icon: Users, number: "82,977", label: "Member Farmers" },
@@ -34,12 +43,12 @@ export default function Index() {
             ].map((stat, index) => {
               const Icon = stat.icon;
               return (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Icon className="w-8 h-8 text-primary" />
+                <div key={index} className="text-center group hover:scale-105 transition-all duration-300">
+                  <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:shadow-lg transition-all duration-300 border border-primary/10">
+                    <Icon className="w-10 h-10 text-primary group-hover:scale-110 transition-transform duration-300" />
                   </div>
-                  <h3 className="text-3xl font-bold text-foreground mb-2">{stat.number}</h3>
-                  <p className="text-muted-foreground">{stat.label}</p>
+                  <h3 className="text-4xl font-bold text-foreground mb-2 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">{stat.number}</h3>
+                  <p className="text-muted-foreground font-medium">{stat.label}</p>
                 </div>
               );
             })}

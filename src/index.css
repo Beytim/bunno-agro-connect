@@ -44,7 +44,10 @@ All colors MUST be HSL.
     --cooperative-gold: 45 85% 55%;
     --gradient-primary: linear-gradient(135deg, hsl(var(--cooperative-green)), hsl(120 50% 35%));
     --gradient-earth: linear-gradient(180deg, hsl(var(--cooperative-earth)), hsl(35 30% 80%));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
     --shadow-natural: 0 10px 40px -10px hsl(var(--cooperative-green) / 0.2);
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.15);
+    --shadow-elegant: 0 20px 60px -10px hsl(var(--primary) / 0.25);
 
     --sidebar-background: 0 0% 98%;
 

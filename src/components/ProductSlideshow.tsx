@@ -80,7 +80,7 @@ export default function ProductSlideshow() {
   };
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-[70vh] min-h-[600px] flex items-center justify-center overflow-hidden rounded-none md:rounded-3xl md:mx-8 md:mt-8 shadow-2xl">
       {/* Background Images */}
       {slides.map((slide, index) => (
         <div
@@ -90,62 +90,62 @@ export default function ProductSlideshow() {
           }`}
           style={{ backgroundImage: `url(${slide.image})` }}
         >
-          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20"></div>
         </div>
       ))}
 
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 transition-colors"
+        className="absolute left-6 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/15 backdrop-blur-md text-white hover:bg-white/25 hover:scale-110 transition-all duration-300 border border-white/20"
         aria-label="Previous slide"
       >
-        <ChevronLeft className="w-6 h-6" />
+        <ChevronLeft className="w-5 h-5" />
       </button>
 
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 transition-colors"
+        className="absolute right-6 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/15 backdrop-blur-md text-white hover:bg-white/25 hover:scale-110 transition-all duration-300 border border-white/20"
         aria-label="Next slide"
       >
-        <ChevronRight className="w-6 h-6" />
+        <ChevronRight className="w-5 h-5" />
       </button>
 
       {/* Content */}
-      <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-        <div className="mb-4">
-          <Badge className="mb-2 bg-primary/80 backdrop-blur-sm">
+      <div className="relative z-10 text-center text-white max-w-5xl mx-auto px-6">
+        <div className="mb-6">
+          <Badge className="mb-3 bg-primary/90 backdrop-blur-md px-4 py-2 text-sm font-medium border border-white/20">
             {slides[currentSlide].badge}
           </Badge>
         </div>
-        <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in bg-gradient-to-b from-white to-white/80 bg-clip-text text-transparent leading-tight">
           {slides[currentSlide].title}
         </h1>
-        <p className="text-xl md:text-2xl mb-8 text-white/90 animate-fade-in">
+        <p className="text-lg md:text-xl lg:text-2xl mb-10 text-white/90 animate-fade-in max-w-3xl mx-auto leading-relaxed">
           {slides[currentSlide].description}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="text-lg px-8">
-            <Link to="/products" className="flex items-center gap-2">
+          <Button size="lg" className="text-lg px-10 py-3 bg-primary hover:bg-primary/90 hover:scale-105 transition-all duration-300 shadow-lg">
+            <Link to="/products" className="flex items-center gap-3">
               View All Products <ArrowRight className="w-5 h-5" />
             </Link>
           </Button>
-          <Button size="lg" variant="outline" className="text-lg px-8 bg-white/10 border-white/30 text-white hover:bg-white/20">
+          <Button size="lg" variant="outline" className="text-lg px-10 py-3 bg-white/10 border-white/30 text-white hover:bg-white/20 hover:scale-105 transition-all duration-300 backdrop-blur-md">
             <Link to="/contact">Join Our Cooperative</Link>
           </Button>
         </div>
       </div>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3 bg-black/20 backdrop-blur-md px-4 py-3 rounded-full border border-white/20">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-colors ${
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
               index === currentSlide
-                ? "bg-white"
-                : "bg-white/40 hover:bg-white/60"
+                ? "bg-white scale-125"
+                : "bg-white/40 hover:bg-white/70 hover:scale-110"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
@@ -153,11 +153,11 @@ export default function ProductSlideshow() {
       </div>
 
       {/* Cooperative Union Title Overlay */}
-      <div className="absolute top-6 left-1/2 -translate-x-1/2 z-20 text-center">
-        <h2 className="text-2xl md:text-3xl font-bold text-white/90">
+      <div className="absolute top-8 left-1/2 -translate-x-1/2 z-20 text-center bg-black/20 backdrop-blur-md px-8 py-4 rounded-2xl border border-white/20">
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white/95 mb-1">
           Bunno Bedelle Farmers' Cooperative Union
         </h2>
-        <p className="text-white/70 text-lg">
+        <p className="text-white/75 text-sm md:text-base">
           Empowering Ethiopian Agriculture Through Innovation
         </p>
       </div>
